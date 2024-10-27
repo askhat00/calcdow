@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dowry calculator</title>
+</head>
+<body>
+
+    <h1>Dowry calculator</h1>
+    <form id="dowryForm">
+        <label>Groom/Bride name:
+            <input type="text" id="name" required>
+        </label><br>
+
+        <label>Starting bid:
+            <input type="number" id="startingBid" required>
+        </label><br>
+
+        <label>Education:
+            <select id="education">
+                <option value="1.5">Undergraduate degree</option>
+                <option value="1.2">College degree</option>
+                <option value="1.05">High school degree</option>
+                <option value="0.9">Middle school degree</option>
+            </select>
+        </label><br>
+
+        <label>Family net worth:
+            <select id="netWorth">
+                <option value="2">More than $10,000</option>
+                <option value="1.5">Between $5,000 and $10,000</option>
+                <option value="1.2">Less than $5,000</option>
+            </select>
+        </label><br>
+
+        <label>Caste:
+            <select id="caste">
+                <option value="100">Brahmin</option>
+                <option value="50">Kshatriya</option>
+                <option value="20">Vaishya</option>
+                <option value="10">Shudra</option>
+                <option value="-50">Varna - untouchable</option>
+            </select>
+        </label><br>
+
+        <fieldset>
+            <legend>Skills:</legend>
+            <label><input type="checkbox" value="10" class="skills"> Plays a musical instrument</label><br>
+            <label><input type="checkbox" value="20" class="skills"> Good cook</label><br>
+            <label><input type="checkbox" value="15" class="skills"> Easygoing character</label><br>
+            <label><input type="checkbox" value="10" class="skills"> Sings well</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Age:</legend>
+            <label><input type="radio" name="age" value="1.5"> 18-23</label><br>
+            <label><input type="radio" name="age" value="1.2"> 24-27</label><br>
+            <label><input type="radio" name="age" value="0.95"> 28+</label><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Reputation:</legend>
+            <label><input type="checkbox" value="0.85" class="reputation"> Gossips about parent's attitude</label><br>
+            <label><input type="checkbox" value="0.9" class="reputation"> Gossips about character</label><br>
+            <label><input type="checkbox" value="-20" class="reputation"> General gossips around them</label><br>
+        </fieldset>
+
+        <label>Love letter:<br>
+            <textarea id="loveLetter" maxlength="500"></textarea>
+        </label><br>
+
+        <button type="button" id="calculateButton">Calculate dowry</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
